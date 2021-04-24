@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> Home </title>
+{% endblock %}
+
+{% block body %}
+<main role="main">
+
+    <div>
+        <div class="bg-light p-5 rounded">
+            <div class="col-sm-8 mx-auto">
+                <h1 class="text-center"> SMS Spam Checker </h1>
+                <p class="text-center">Please enter a message below to check whether the message is SPAM or HAM.</p>
+                <br>
+                <form action='/predict' method='POST'>
+                    <label for="message"> Your Message* </label>
+                    <textarea class="form-control" name='message' id='message' placeholder="Enter Your Message"
+                        aria-label="Enter Your Message" rows="3"></textarea>
+                    <br>
+                    <input class="btn btn-success" type='submit' value='Check Spam or Not'>
+                </form>
+                <br>
+                {% if pred==0 %}
+                <h3 class="text-center" style="color:green"> This Message is not a SPAM, Its a HAM !!!</h3>
+                {% elif pred==1 %}
+                <h3 class="text-center" style="color:red"> This Message is a SPAM !! Be Careful.</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
