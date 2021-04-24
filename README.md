@@ -6,7 +6,10 @@ The ML model used here is a Naive Bayes model. The web App is being built using 
 Cheers!!!  
 
 ## App Link: 
-https://startup-profit-prediction-app.herokuapp.com/
+https://spam-checker.herokuapp.com/
+
+## Kaggle Kernel:
+https://www.kaggle.com/amitkarmakar41/spamclassifier
 
 ## Project Level:
 Beginner
